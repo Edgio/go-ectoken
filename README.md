@@ -1,25 +1,77 @@
-EdgeCast Token Authentication extension for Go
-===============================================
+# go-ectoken
+> _golang implementation of EdgeCast token (`ectoken`)_
 
-Written against Go 1.10, but is expected to work with older versions.
 
-To build and install the test utility, simply run
-'go get -u github.com/VerizonDigital/ectoken/go-ectoken/ectoken'
+## Table of Contents
 
-Command-line usage for encrypting and decrypting is as
-follows:
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Contribute](#contribute)
+- [License](#license)
 
-     To Encrypt:
-         ec_encrypt <key> <text>
-     or:
-         ec_encrypt encrypt <key> <text>
-     To Decrypt:
-         ec_encrypt decrypt <key> <text>
 
-For instance, using an encryption key of "testkey123":
+## Background
 
-$ ./ectoken encrypt testkey123 'ec_expire=1257642471&ec_secure=33'
-af0c6acf7906cd500aee63a4dd2e97ddcb0142601cf83aa9d622289718c4c85413
+golang implementation of the "EdgeCast Token" (`ectoken`) -see main repo [ectoken](https://github.com/VerizonDigital/ectoken) for more details.
 
-$ ./ectoken decrypt testkey123 af0c6acf7906cd500aee63a4dd2e97ddcb0142601cf83aa9d622289718c4c85413
-ec_expire=1257642471&ec_secure=33
+## Install
+
+
+### Build with Make
+```sh
+go-ectoken>make
+go build ./cmd/ectoken/ectoken.go
+```
+
+### Running tests
+```sh
+go-ectoken>make test
+go clean -testcache
+go test ./...
+ok  	_/go-ectoken	0.002s
+?   	_/go-ectoken/cmd/ectoken	[no test files]
+go test ./cmd/ectoken/...
+?   	_/go-ectoken/cmd/ectoken	[no test files]
+```
+
+## Usage
+
+### Help
+```sh
+~>./ectoken 
+error: wrong number of arguments specified
+Usage:
+ To Encrypt:
+     ec_encrypt <key> <text>
+ or:
+     ec_encrypt encrypt <key> <text>
+ To Decrypt:
+     ec_encrypt decrypt <key> <text>
+```
+
+### Encrypt
+
+Encrypt clear text token `<token>` with key: `<key>`:
+```sh
+~>./ectoken encrypt MY_SECRET_KEY MY_COOL_TOKEN
+aaOUHrqxEmCLpnSAwTD06I54ffrtaa0K-3P7KKbosRChSubvbtWq5VY
+```
+
+### Decrypt
+
+Decrypt ciphertext token `<token>` with key: `<key>`:
+```sh
+~>./ectoken decrypt MY_SECRET_KEY lm6b156_M3XkS8SWOdJ_D1UBPZZzX7cDxh6aCb9kJ7pox0eco9XZqSk
+MY_COOL_TOKEN
+```
+
+
+## Contribute
+
+- We welcome issues, questions and pull requests.
+
+
+## License
+
+This project is licensed under the terms of the Apache 2.0 open source license. Please refer to the `LICENSE-2.0.txt` file for the full terms.

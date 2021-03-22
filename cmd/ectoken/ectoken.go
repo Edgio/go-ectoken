@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/VerizonDigital/ectoken/go-ectoken"
+	"github.com/VerizonDigital/go-ectoken"
 )
 
 var usage = `Usage:
@@ -35,9 +35,9 @@ func main() {
 
 	switch action {
 	case "encrypt":
-		fmt.Println(ectoken.EncryptV3(key, token))
+		fmt.Println(ectoken.Encrypt(key, token))
 	case "decrypt":
-		out, err := ectoken.DecryptV3(key, token)
+		out, err := ectoken.Decrypt(key, token)
 		if err != nil {
 			fmt.Printf("error: %s\n", err)
 			os.Exit(-1)
