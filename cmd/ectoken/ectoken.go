@@ -9,11 +9,11 @@ import (
 
 var usage = `Usage:
  To Encrypt:
-     ec_encrypt <key> <text>
+     ectoken <key> <text>
  or:
-     ec_encrypt encrypt <key> <text>
+     ectoken encrypt <key> <text>
  To Decrypt:
-     ec_encrypt decrypt <key> <text>
+     ectoken decrypt <key> <text>
 `
 
 func main() {
