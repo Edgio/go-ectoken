@@ -16,11 +16,11 @@ func init() {
 }
 
 /*
- * DecryptV3 decrypts the given token using the supplied key. On success,
+ * Decrypt decrypts the given token using the supplied key. On success,
  * returns the decrypted content and a nil error. If the token is invalid or
  * can not be decrypted, returns an empty string and a non-nil error.
  */
-func DecryptV3(key, token string) (string, error) {
+func Decrypt(key, token string) (string, error) {
 	token = strings.TrimRight(token, "=")
 	enc, err := base64.RawURLEncoding.DecodeString(token)
 	if err != nil {
@@ -41,9 +41,9 @@ func DecryptV3(key, token string) (string, error) {
 }
 
 /*
- * EncryptV3 encrypts the given content using the supplied key.
+ * Encrypt encrypts the given content using the supplied key.
  */
-func EncryptV3(key, token string) string {
+func Encrypt(key, token string) string {
 	keyHash := sha256.Sum256([]byte(key))
 	block, _ := aes.NewCipher(keyHash[:])
 	gcm, _ := cipher.NewGCM(block)

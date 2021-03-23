@@ -10,21 +10,21 @@ const (
 	ermsg = "expected string hash recieved nothing."
 )
 
-func TestEncryptV3(t *testing.T) {
+func TestEncrypt(t *testing.T) {
 	// should always get a hash back greater than 0
-	if result := len(EncryptV3(key, "")); result <= 0 {
+	if result := len(Encrypt(key, "")); result <= 0 {
 		t.Error(ermsg)
 	}
 
-	if result := len(EncryptV3(key, token)); result <= 0 {
+	if result := len(Encrypt(key, token)); result <= 0 {
 		t.Error(ermsg)
 	}
 }
 
-func TestDecryptV3(t *testing.T) {
-	tokenHash := EncryptV3(key, token)
+func TestDecrypt(t *testing.T) {
+	tokenHash := Encrypt(key, token)
 
-	result, err := DecryptV3(key, tokenHash)
+	result, err := Decrypt(key, tokenHash)
 	if err != nil {
 		t.Error(err)
 	}
