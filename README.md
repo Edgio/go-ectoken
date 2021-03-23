@@ -40,7 +40,6 @@ go test ./cmd/ectoken/...
 ### Help
 ```sh
 ~>./ectoken 
-error: wrong number of arguments specified
 Usage:
  To Encrypt:
      ec_encrypt <key> <text>
