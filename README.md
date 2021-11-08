@@ -13,7 +13,7 @@
 
 ## Background
 
-golang implementation of the "EdgeCast Token" (`ectoken`) -see main repo [ectoken](https://github.com/VerizonDigital/ectoken) for more details.
+golang implementation of the "EdgeCast Token" (`ectoken`) -see main repo [ectoken](https://github.com/EdgeCast/ectoken) for more details.
 
 ## Install
 
