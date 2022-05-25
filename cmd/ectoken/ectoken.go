@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/VerizonDigital/go-ectoken"
+	"github.com/EdgeCast/go-ectoken"
 )
 
 var usage = `Usage:
