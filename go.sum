@@ -1,2 +1,2 @@
-github.com/EdgeCast/go-ectoken v0.0.0-20211108235435-26f6d376dbb9 h1:qvzKKIRkupdIlzIgaEHmcs6oop0J0PCMQK2XDaDhN+g=
-github.com/EdgeCast/go-ectoken v0.0.0-20211108235435-26f6d376dbb9/go.mod h1:MY3ojRXf2GHI3ql/AbInkUwNLIuMqD5b0lkyC/xPQP4=
+github.com/edgioinc/go-ectoken v0.0.0-20211108235435-26f6d376dbb9 h1:GjlEtJZ+tplY1MykUgd/alRpPCtofO+InMB9N8FDaqY=
+github.com/edgioinc/go-ectoken v0.0.0-20211108235435-26f6d376dbb9/go.mod h1:a4MrhONPHBUss6B++UgLU0yvMM3kTudFbq6HMd2WzcY=

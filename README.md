@@ -1,5 +1,5 @@
 # go-ectoken
-> _golang implementation of EdgeCast token (`ectoken`)_
+> _golang implementation of Edgio token (`ectoken`)_
 
 
 ## Table of Contents
@@ -13,7 +13,7 @@
 
 ## Background
 
-golang implementation of the "EdgeCast Token" (`ectoken`) -see main repo [ectoken](https://github.com/EdgeCast/ectoken) for more details.
+golang implementation of the "Edgio Token" (`ectoken`) -see main repo [ectoken](https://github.com/edgioinc/ectoken) for more details.
 
 ## Install
 
